@@ -10,16 +10,16 @@ app.config(function($routeProvider){
         templateUrl: "partials/auth.html",
         controller: "AuthCtrl"
     })
-    .when("/contacts-favorites", {
-        templateUrl: "partials/contacts-favorites.html",
+    .when("/contacts/favorites", {
+        templateUrl: "partials/contacts/favorites.html",
         controller: "FavCtrl"
     })
-    .when("/contacts-new", {
-        templateUrl: "partials/contacts-new.html",
+    .when("/contacts/new", {
+        templateUrl: "partials/contacts/new.html",
         controller: "NewCtrl"
     })
-    .when("/contacts-view", {
-        templateUrl: "partials/contacts-view.html",
+    .when("/contacts/view", {
+        templateUrl: "partials/contacts/view.html",
         controller: "ViewCtrl"
     })
     .otherwise("/auth");
