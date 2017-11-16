@@ -8,13 +8,12 @@
 			"category": "Colleague",
 			"cell-phone": "(503)-799-8184",
 			"email": "kristin.mckinney@nashvillesoftwareschool.com",
-            "address-street": "123 Fake Street",
-            "address-city": "East Nasty",
-            "address-state": "TN",
-            "address-zip": "37210",
-            "github-link": "",
+            "location": "East Nasty, TN",
+            "github-link": "none",
             "linkedin-link": "https://www.linkedin.com/in/kristinmckinney/",
-            "imgage": "https://media-exp2.licdn.com/media/p/6/005/090/321/3bf926e.jpg"
+            "imgage": "https://media-exp2.licdn.com/media/p/6/005/090/321/3bf926e.jpg",
+            "favorite": false,
+            "uid": "VNWDp1OvlVW4thyzkvuBGvkXIgi1"
 		},
 		"contact1": {
             "first-name": "Callan",
@@ -24,13 +23,12 @@
 			"category": "Friend",
 			"cell-phone": "(804)543-5474",
 			"email": "callan.l.morrison@gmail.com",
-            "address-street": "456 Somewhere Ln",
-            "address-city": "Nashville",
-            "address-state": "TN",
-            "address-zip": "37210",
+            "location": "Nashville, TN",
             "github-link": "https://github.com/morecallan",
             "linkedin-link": "https://www.linkedin.com/in/callanmorrison/",
-            "imgage": "https://media-exp2.licdn.com/media/AAEAAQAAAAAAAAS9AAAAJDZiMjFlMjMwLTIxZTEtNDA5NS1iZDdhLWVjMWFjOTllMDIwMg.jpg"
+            "imgage": "https://media-exp2.licdn.com/media/AAEAAQAAAAAAAAS9AAAAJDZiMjFlMjMwLTIxZTEtNDA5NS1iZDdhLWVjMWFjOTllMDIwMg.jpg",
+            "favorite": false,
+            "uid": "VNWDp1OvlVW4thyzkvuBGvkXIgi1"
 		},
 		"contact2": {
             "first-name": "Zoe",
@@ -40,13 +38,12 @@
 			"category": "Teacher",
 			"cell-phone": "(615)867-5309",
 			"email": "zoeames@gmail.com",
-            "address-street": "789 Pusssy Ln.",
-            "address-city": "Nashville",
-            "address-state": "TN",
-            "address-zip": "37210",
+            "location": "Nashville, TN",
             "github-link": "https://github.com/zoeames",
             "linkedin-link": "https://www.linkedin.com/in/zoeames/",
-            "imgage": "https://media-exp2.licdn.com/media/p/1/005/09c/042/001c6ed.jpg"
+            "imgage": "https://media-exp2.licdn.com/media/p/1/005/09c/042/001c6ed.jpg",
+            "favorite": false,
+            "uid": "VNWDp1OvlVW4thyzkvuBGvkXIgi1"
 		},
 		"contact3": {
             "first-name": "Lauren",
@@ -56,13 +53,12 @@
 			"category": "Teacher",
 			"cell-phone": "(615)123-4567",
 			"email": "lauren.l.rouse@gmail.com",
-            "address-street": "102 Shat Rd",
-            "address-city": "Nashville",
-            "address-state": "TN",
-            "address-zip": "37216",
+            "location": "Nashville",
             "github-link": "https://github.com/rousell",
             "linkedin-link": "https://www.linkedin.com/in/laurenlrouse/",
-            "imgage": "https://media-exp2.licdn.com/media/p/5/005/091/3a7/3d60ddf.jpg"
+            "imgage": "https://media-exp2.licdn.com/media/p/5/005/091/3a7/3d60ddf.jpg",
+            "favorite": false,
+            "uid": "VNWDp1OvlVW4thyzkvuBGvkXIgi1"
 		},
 		"contact4": {
             "first-name": "Brittney",
@@ -72,13 +68,12 @@
 			"category": "Friend",
 			"cell-phone": "(615)440-1874",
 			"email": "bjmarkel2636@gmail.com",
-            "address-street": "2349 Forest Lake Dr",
-            "address-city": "Nashville",
-            "address-state": "TN",
-            "address-zip": "37211",
-            "github-link": "",
+            "address-city": "Nashville, TN",
+            "github-link": "none",
             "linkedin-link": "https://www.linkedin.com/in/brittneyschelich/",
-            "imgage": "https://media-exp2.licdn.com/media/AAEAAQAAAAAAAAyjAAAAJGQ4M2VkMDRkLTJjNTMtNGYyZi05N2RkLTY0NTkwYzlhMmJlYg.jpg"
+            "imgage": "https://media-exp2.licdn.com/media/AAEAAQAAAAAAAAyjAAAAJGQ4M2VkMDRkLTJjNTMtNGYyZi05N2RkLTY0NTkwYzlhMmJlYg.jpg",
+            "favorite": false,
+            "uid": "VNWDp1OvlVW4thyzkvuBGvkXIgi1"
 		},
 		"contact5": {
             "first-name": "Leah",
@@ -88,13 +83,12 @@
 			"category": "Friend",
 			"cell-phone": "(615)600-6958",
 			"email": "leahcmassey@gmail.com",
-            "address-street": "136 Shadow Glen",
-            "address-city": "Nashville",
-            "address-state": "TN",
-            "address-zip": "37211",
-            "github-link": "",
+            "location": "Nashville",
+            "github-link": "none",
             "linkedin-link": "https://www.linkedin.com/in/leahmassey/",
-            "imgage": "https://media-exp2.licdn.com/media/AAEAAQAAAAAAAA2NAAAAJGIwMmU5NmMyLTRhMTYtNDg4ZC1hODljLTQzMmQyYTE3MjRkOQ.jpg"
+            "imgage": "https://media-exp2.licdn.com/media/AAEAAQAAAAAAAA2NAAAAJGIwMmU5NmMyLTRhMTYtNDg4ZC1hODljLTQzMmQyYTE3MjRkOQ.jpg",
+            "favorite": false,
+            "uid": "1ZjTsGrP35UtkT6mBvGVRbhkd3B2"
 		},
 		"contact6": {
             "first-name": "Josh",
@@ -104,13 +98,12 @@
 			"category": "Family",
 			"cell-phone": "(573)590-2952",
 			"email": "joshvernon89@yahoo.com",
-            "address-street": "2151 Candleglow St",
-            "address-city": "Castle Rock",
-            "address-state": "CO",
-            "address-zip": "80109",
-            "github-link": "",
-            "linkedin-link": "",
-            "imgage": "https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/21616232_10214559024917511_7706059528990099465_n.jpg?oh=beed019025914a8501bb069536d87521&oe=5A911693"
+            "location": "Castle Rock, CO",
+            "github-link": "none",
+            "linkedin-link": "none",
+            "imgage": "https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/21616232_10214559024917511_7706059528990099465_n.jpg?oh=beed019025914a8501bb069536d87521&oe=5A911693",
+            "favorite": false,
+            "uid": "1ZjTsGrP35UtkT6mBvGVRbhkd3B2"
         },
         "contact7": {
             "first-name": "Josh",
@@ -120,13 +113,12 @@
 			"category": "Employer",
 			"cell-phone": "(808)347-8896",
 			"email": "josh@eastfive.com",
-            "address-street": "",
-            "address-city": "Franklin",
-            "address-state": "TN",
-            "address-zip": "",
+            "location": "Franklin, TN",
             "github-link": "https://github.com/joshcodes",
             "linkedin-link": "https://www.linkedin.com/in/wingstrom/",
-            "imgage": "https://avatars1.githubusercontent.com/u/3767425?s=400&v=4"           
+            "imgage": "https://avatars1.githubusercontent.com/u/3767425?s=400&v=4",
+            "favorite": false,
+            "uid": "1ZjTsGrP35UtkT6mBvGVRbhkd3B2"           
         },
         "contact8": {
             "first-name": "Justin",
@@ -134,15 +126,14 @@
             "title": "Sr. Engineer",
             "company": "Built",
 			"category": "Mentor",
-			"cell-phone": "",
+			"cell-phone": "none",
 			"email": "baselogik@gmail.com ",
-            "address-street": "",
-            "address-city": "Nashville",
-            "address-state": "TN",
-            "address-zip": "",
-            "github-link": "",
+            "location": "Nashville, TN",
+            "github-link": "none",
             "linkedin-link": "https://www.linkedin.com/in/baselogik/",
-            "imgage": "https://media-exp2.licdn.com/media/AAEAAQAAAAAAAAQjAAAAJDVlMmY0YjAxLTYxM2UtNGViZC05YTFmLTQzZDRjYmJhNTM2Mw.jpg"         
+            "imgage": "https://media-exp2.licdn.com/media/AAEAAQAAAAAAAAQjAAAAJDVlMmY0YjAxLTYxM2UtNGViZC05YTFmLTQzZDRjYmJhNTM2Mw.jpg",
+            "favorite": false,
+            "uid": "1ZjTsGrP35UtkT6mBvGVRbhkd3B2"         
         },
         "contact9": {
             "first-name": "Jess",
@@ -152,13 +143,12 @@
 			"category": "Family",
 			"cell-phone": "(800)000-999",
 			"email": "jessica.brawner@nashvillesoftwareschool.com",
-            "address-street": "123 Home",
-            "address-city": "Old Hickory",
-            "address-state": "TN",
-            "address-zip": "37138",
+            "location": "Old Hickory, TN",
             "github-link": "https://github.com/lady-ace",
             "linkedin-link": "https://www.linkedin.com/in/jessicabrawner/",
-            "imgage": "https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAeWAAAAJDNmZTk4ZTdiLTQwNmEtNDVlNS1iMjcxLWZlMjBmNTJiYzVlNw.jpg"            
+            "imgage": "https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAeWAAAAJDNmZTk4ZTdiLTQwNmEtNDVlNS1iMjcxLWZlMjBmNTJiYzVlNw.jpg",
+            "favorite": false,
+            "uid": "1ZjTsGrP35UtkT6mBvGVRbhkd3B2"            
         }
 	}
 }
