@@ -1,7 +1,10 @@
 <div class="text-center" id="new">
     <h1>New Contact</h1>
 </div>
- <div class="col-md-offset-1">  
+
+<div class="col-md-offset-1"> 
+
+
     <fieldset class="container">
         <legend class="col-md-2 control-label" >Name</legend> 
             <fieldset class="form-group text-center">
@@ -18,11 +21,49 @@
             </fieldset>
     </fieldset>
 
+
+    <fieldset class="container">
+        <legend class="col-md-2 control-label" >Contact</legend> 
+            <fieldset class="form-group text-center">
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                        <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
+                        <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-map-marker""></i></span>
+                        <input name="address" placeholder="City, State" class="form-control" type="text">
+                    </div>
+                </div>
+        </fieldset>
+    </fieldset>
+
       
     <fieldset class="container">
         <legend class="col-md-2 control-label" >About</legend> 
             <fieldset class="form-group text-center">
                 <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-list-alt"></i></span>
+                        <select name="category" class="form-control selectpicker" >
+                           <option value=" " >Select Category</option>
+                           <option>Family</option>
+                           <option>Friend</option>
+                           <option>Acquaintance</option>
+                           <option>Colleague</option>
+                           <option>Mentor</option>
+                           <option>Manager/Supervisor</option>
+                           <option>Classmate</option>
+                           <option>Teacher</option>
+                           <option>Client</option>
+                           <option>Other</option>
+                        </select>
+                    </div>
+
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
                         <input name="last_name" placeholder="Title" class="form-control"  type="text">
@@ -48,26 +89,6 @@
     </fieldset>
     
 
-    <fieldset class="container">
-        <legend class="col-md-2 control-label" >Contact</legend> 
-            <fieldset class="form-group text-center">
-                <div class="col-md-4 inputGroupContainer">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
-                        <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
-                        <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-map-marker""></i></span>
-                        <input name="address" placeholder="City, State" class="form-control" type="text">
-                    </div>
-                </div>
-        </fieldset>
-    </fieldset>
-      
     <div class="container">     
         <div class="row">
             <div class="col-md-offset-3">
@@ -75,4 +96,6 @@
             </div>
         </div>
     </div>
+
+
 </div>
