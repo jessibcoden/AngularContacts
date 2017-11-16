@@ -1,2 +1,14 @@
 body {
   background-color: #59a27a; }
+
+#auth .btn {
+  background-color: #59a27a;
+  border-color: #59a27a; }
+
+.googleButton {
+  background: url(../images/google-sign-in.png);
+  width: 33%;
+  height: 10%;
+  border-radius: 5px; }
+  .googleButton:hover {
+    box-shadow: 0 0 20px #FBBC05; }
