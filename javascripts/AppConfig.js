@@ -2,8 +2,6 @@
 
 let isAuth = (AuthService) => new Promise ((resolve, reject) => {
     if(AuthService.isAuthenticated()){
-    console.log("isAuth");
-    
       resolve();
     } else {
       reject();
