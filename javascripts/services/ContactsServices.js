@@ -16,7 +16,7 @@ app.service("ContactsService", function($http, $q, $rootScope, FIREBASE_CONFIG) 
             "github_link": contact.github_link,
             "linkedin_link": contact.linkedin_link,
             "image": contact.image,
-            "favorite": false,
+            "favorite": contact.favorite,
             "uid": userId
         };
     };
@@ -33,8 +33,10 @@ app.service("ContactsService", function($http, $q, $rootScope, FIREBASE_CONFIG) 
                 Object.keys(fbContacts).forEach((key) => {
                     fbContacts[key].id = key; 
                     contacts.push(fbContacts[key]);
-                resolve(contacts);
                 });
+                console.log("contacts", contacts);
+                resolve(contacts);
+                
             }).catch((err) => {
                 reject(err);
             });
@@ -64,7 +66,8 @@ app.service("ContactsService", function($http, $q, $rootScope, FIREBASE_CONFIG) 
     };
 
     const updateContact = (contact, contactId) => {
-        return $http.put(`${FIREBASE_CONFIG.databaseURL}/contact/${contactId}.json`, JSON.stringify(contact));
+        console.log("contact in updateContact", contactId);
+        return $http.put(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`, JSON.stringify(contact));
     };
 
 

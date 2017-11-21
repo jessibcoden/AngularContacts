@@ -1,13 +1,10 @@
 @import 'colors';
 @import 'variables';
 
-body {
-    background-color: $green;
-}
 
 #auth .btn {
-    background-color: $green;
-    border-color: $green;
+    background-color: white;
+    border-color: white;
 }
 
 .googleButton {
@@ -19,5 +16,21 @@ body {
 
 	&:hover {
 		box-shadow: $boxShadow;
+	}
+}
+
+.contactCard {
+	background-color: lightslategray;
+	text-align: center;
+	height: 350px;
+	margin: 10px;
+
+	.card {
+		margin: auto;
+		
+		.email {
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
 	}
 }

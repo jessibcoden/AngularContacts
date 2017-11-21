@@ -6,7 +6,6 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactsServic
         let newContact = ContactsService.createContactObject(contact);
         console.log("newContact", newContact);
         ContactsService.postNewContact(newContact, contact.id).then((results) => {
-            console.log("result", results);
             $scope.contacts = results;
             $location.url("/contacts/view");
     }).catch((err) => {
