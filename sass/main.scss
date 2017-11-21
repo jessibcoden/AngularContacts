@@ -25,9 +25,16 @@
 	height: 350px;
 	margin: 10px;
 
+	.contactImage {
+		width: 50%;
+		border-radius: 50%;
+		border: 2px solid black;
+		margin-top: 5px;
+	}			
+
 	.card {
 		margin: auto;
-		
+
 		.email {
 			overflow: hidden;
 			text-overflow: ellipsis;

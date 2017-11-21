@@ -15,6 +15,11 @@
   text-align: center;
   height: 350px;
   margin: 10px; }
+  .contactCard .contactImage {
+    width: 50%;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin-top: 5px; }
   .contactCard .card {
     margin: auto; }
     .contactCard .card .email {

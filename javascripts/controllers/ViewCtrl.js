@@ -5,7 +5,11 @@ app.controller("ViewCtrl", function($scope,$rootScope, ContactsService){
 
     const getContacts = () => {
         ContactsService.getAllContacts($rootScope.uid).then((results) => {
+            results.forEach(function(result) {
+                result.image = assignImage(result.category);
+            });
             $scope.contacts = results;
+            console.log("contacts with images", $scope.contacts);
         }).catch((err) => {
             console.log("error in getContacts");
             });
@@ -57,6 +61,41 @@ app.controller("ViewCtrl", function($scope,$rootScope, ContactsService){
     //         });
     //     };
 
+    const assignImage = (category) => {
+        let image;
+        switch(category) {
+            case "Friend":
+                image = "./images/friend.jpg";
+                break;
+            case "Family":
+                image = "./images/family.jpg";
+                break;
+            case "Acquaintance":
+                image = "./images/acquaintance.jpg";
+                break;
+            case "Classmate":
+                image = "./images/classmate.jpg";
+                break;
+            case "Client":
+                image = "./images/client.jpg";
+                break;
+            case "Colleague":
+                image = "./images/colleague.jpg";
+                break;
+            case "Manager":
+                image = "./images/manager.jpg";
+                break;
+            case "Mentor":
+                image = "./images/mentor.jpg";
+                break;
+            case "Teacher":
+                image = "./images/teacher.jpg";
+                break;
+            default:
+                image = "./images/other.jpg";
+        }
+        return image;
+    };
 
 });
 
