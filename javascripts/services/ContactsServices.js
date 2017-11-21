@@ -14,8 +14,10 @@ app.service("ContactsService", function($http, $q, FIREBASE_CONFIG) {
                 Object.keys(fbContacts).forEach((key) => {
                     fbContacts[key].id = key; 
                     contacts.push(fbContacts[key]);
-                resolve(contacts);
                 });
+                console.log("contacts", contacts);
+                resolve(contacts);
+                
             }).catch((err) => {
                 reject(err);
             });
@@ -25,7 +27,6 @@ app.service("ContactsService", function($http, $q, FIREBASE_CONFIG) {
     const deleteContact = (contactId) => {
         return $http.delete(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`);
     };
-
 
     return {postNewContact, getAllContacts, deleteContact};
 });

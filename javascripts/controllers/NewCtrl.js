@@ -4,6 +4,7 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactsServic
 
     let userId = $rootScope.uid;
     const createContactObject = (contact) => {
+        
         return{
             "first_name": contact.first_name,
             "last_name": contact.last_name,
@@ -19,13 +20,13 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactsServic
             "favorite": false,
             "uid": userId
         };
+
     };
 
     $scope.addNewContact = (contact) => {
         let newContact = createContactObject(contact);
         console.log("newContact", newContact);
         ContactsService.postNewContact(newContact, contact.id).then((results) => {
-            console.log("result", results);
             $scope.contacts = results;
             $location.url("/contacts/view");
     }).catch((err) => {
