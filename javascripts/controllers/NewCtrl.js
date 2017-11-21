@@ -12,7 +12,7 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactsServic
             "company": contact.company,
             "category": contact.category,
             "cell_phone": contact.cell_phone,
-            "email": contact.cell_phone,
+            "email": contact.email,
             "location": contact.location,
             "github_link": contact.github_link,
             "linkedin_link": contact.linkedin_link,
