@@ -1,9 +1,6 @@
-body {
-  background-color: #59a27a; }
-
 #auth .btn {
-  background-color: #59a27a;
-  border-color: #59a27a; }
+  background-color: white;
+  border-color: white; }
 
 .googleButton {
   background: url(../images/google-sign-in.png);
@@ -12,3 +9,14 @@ body {
   border-radius: 5px; }
   .googleButton:hover {
     box-shadow: 0 0 20px #FBBC05; }
+
+.contactCard {
+  background-color: lightslategray;
+  text-align: center;
+  height: 350px;
+  margin: 10px; }
+  .contactCard .card {
+    margin: auto; }
+    .contactCard .card .email {
+      overflow: hidden;
+      text-overflow: ellipsis; }

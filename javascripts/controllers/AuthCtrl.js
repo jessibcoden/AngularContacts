@@ -1,8 +1,8 @@
 "use strict";
 
-app.controller("AuthCtrl", function($location, $rootScope, $scope, AuthServices){
+app.controller("AuthCtrl", function($location, $rootScope, $scope, AuthService){
     $scope.authenticate = () => {
-        AuthServices.authenticateGoogle().then((result) => {
+        AuthService.authenticateGoogle().then((result) => {
             $rootScope.uid = result.user.uid;
             $scope.$apply(() => {
                 $location.url("/contacts/view");
@@ -12,3 +12,4 @@ app.controller("AuthCtrl", function($location, $rootScope, $scope, AuthServices)
             });
     };
 });
+

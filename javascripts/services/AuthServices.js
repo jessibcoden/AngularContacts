@@ -1,11 +1,19 @@
 "use strict";
 
-app.service("AuthServices", function(){
+app.service("AuthService", function(){
     const authenticateGoogle = () => {
         const provider = new firebase.auth.GoogleAuthProvider();
         return firebase.auth().signInWithPopup(provider);
     };
 
-    return {authenticateGoogle};
+    const isAuthenticated = () => {
+        return firebase.auth().currentUser ? true : false;
+     };
+
+     const logoutUser = () => {
+        firebase.auth().signOut();
+     };
+
+    return {authenticateGoogle, isAuthenticated, logoutUser};
     
 });
