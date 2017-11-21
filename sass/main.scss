@@ -19,11 +19,17 @@
 	}
 }
 
+form {
+	margin-left: 7%;
+}
+
 .contactCard {
-	background-color: lightslategray;
+	background-color: rgba(171,172,171, 0.6);
 	text-align: center;
 	height: 350px;
 	margin: 10px;
+	box-shadow: 7px 7px 5px #383636;
+	border-radius: 5px;
 
 	.contactImage {
 		width: 50%;
@@ -34,6 +40,11 @@
 
 	.card {
 		margin: auto;
+		color: white;
+
+		.contactHeader{
+			color:black;
+		}
 
 		.email {
 			overflow: hidden;

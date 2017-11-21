@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("ViewCtrl", function($scope,$rootScope, ContactsService){
+app.controller("ViewCtrl", function($location, $scope,$rootScope, $routeParams, ContactsService){
     $scope.contact = {};
 
     const getContacts = () => {
@@ -47,6 +47,16 @@ app.controller("ViewCtrl", function($scope,$rootScope, ContactsService){
         });
     };
 
+    $scope.editContact = (contactId) => {
+        console.log("inside editContact");
+        $location.path(`/contacts/edit/${contactId}`);
+      };
+
+
+    
+
+   
+
     // $scope.switchFavoriteStatus = ($event, contact, contactId) => {
     //     if ($event.favorite){
     //         contact.favorite = false;
@@ -86,7 +96,7 @@ app.controller("ViewCtrl", function($scope,$rootScope, ContactsService){
                 image = "./images/manager.jpg";
                 break;
             case "Mentor":
-                image = "./images/mentor.jpg";
+                image = "./images/mentor.png";
                 break;
             case "Teacher":
                 image = "./images/teacher.jpg";

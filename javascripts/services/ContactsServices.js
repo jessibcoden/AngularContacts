@@ -4,6 +4,7 @@ app.service("ContactsService", function($http, $q, $rootScope, FIREBASE_CONFIG) 
 
     let userId = $rootScope.uid;
     const createContactObject = (contact) => {
+        console.log("inside createContactObject");
         return{
             "first_name": contact.first_name,
             "last_name": contact.last_name,
@@ -66,11 +67,16 @@ app.service("ContactsService", function($http, $q, $rootScope, FIREBASE_CONFIG) 
     };
 
     const updateContact = (contact, contactId) => {
-        console.log("contact in updateContact", contactId);
+        console.log("inside updateContact", contactId);
         return $http.put(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`, JSON.stringify(contact));
     };
 
+    const getSingleContact = (contactId) => {
+        console.log("inside getSingleContact");
+        return $http.get(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`);
+      };
 
-    return {postNewContact, getAllContacts, deleteContact, createContactObject, getFavorites, updateContact};
+
+    return {postNewContact, getAllContacts, deleteContact, createContactObject, getFavorites, updateContact, getSingleContact};
 });
 

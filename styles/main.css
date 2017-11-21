@@ -10,18 +10,26 @@
   .googleButton:hover {
     box-shadow: 0 0 20px #FBBC05; }
 
+form {
+  margin-left: 7%; }
+
 .contactCard {
-  background-color: lightslategray;
+  background-color: rgba(171, 172, 171, 0.6);
   text-align: center;
   height: 350px;
-  margin: 10px; }
+  margin: 10px;
+  box-shadow: 7px 7px 5px #383636;
+  border-radius: 5px; }
   .contactCard .contactImage {
     width: 50%;
     border-radius: 50%;
     border: 2px solid black;
     margin-top: 5px; }
   .contactCard .card {
-    margin: auto; }
+    margin: auto;
+    color: white; }
+    .contactCard .card .contactHeader {
+      color: black; }
     .contactCard .card .email {
       overflow: hidden;
       text-overflow: ellipsis; }
