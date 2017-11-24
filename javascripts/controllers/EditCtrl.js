@@ -4,7 +4,6 @@ app.controller("EditCtrl", function ($location, $rootScope, $routeParams, $scope
   $scope.contact = {};
 
   const getContact = () => {
-      console.log("inside getContact");
     ContactsService.getSingleContact($routeParams.contactId).then((results) => {
       $scope.contact = results.data;
     }).catch((error) => {
@@ -15,7 +14,6 @@ app.controller("EditCtrl", function ($location, $rootScope, $routeParams, $scope
   getContact();
 
   $scope.saveEdits = function (contact) {
-    console.log("inside saveEdits");
     let updatedContact = ContactsService.createContactObject(contact);
     ContactsService.updateContact(updatedContact, $routeParams.contactId).then(() => {
       getContact();

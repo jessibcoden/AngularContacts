@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("FavCtrl", function($rootScope, $scope, ContactsService){
+app.controller("FavCtrl", function($location, $rootScope, $scope, ContactsService){
 
     const getContacts = () => {
         ContactsService.getFavorites($rootScope.uid).then((results) => {
@@ -22,20 +22,21 @@ app.controller("FavCtrl", function($rootScope, $scope, ContactsService){
     });
     };
 
-    // $scope.switchFavoriteStatus = ($event, contact, contactId) => {
-    //     if ($event.favorite){
-    //         contact.favorite = false;
-    //     }else {
-    //         contact.favorite = true;
-    //     }
-    //     let updateFavoriteStatus = ContactsService.createContactObject(contact);
-    //     ContactsService.updateContact(updateFavoriteStatus, contact.id).then((result) => {
-    //         getContacts();
-    //         }).catch((err) => {
-    //             console.log("error in updateMovie", err);
-    //         });
-    //     };
+    $scope.deleteContact = (contactId) => {
+        ContactsService.deleteContact(contactId).then((result) => {
+            getContacts();
+        }).catch((err) => {
+            console.log("error in deleteContact", err);
+        });
+    };
 
+    $scope.editContact = (contactId) => {
+        $location.path(`/contacts/edit/${contactId}`);
+    };
+
+    $scope.showDetails = (contactId) => {
+        $location.path(`/contacts/detail/${contactId}`);
+    };
 
 });
 

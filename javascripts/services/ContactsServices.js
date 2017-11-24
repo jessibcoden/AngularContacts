@@ -4,7 +4,6 @@ app.service("ContactsService", function($http, $q, $rootScope, FIREBASE_CONFIG) 
 
     let userId = $rootScope.uid;
     const createContactObject = (contact) => {
-        console.log("inside createContactObject");
         return{
             "first_name": contact.first_name,
             "last_name": contact.last_name,
@@ -12,7 +11,7 @@ app.service("ContactsService", function($http, $q, $rootScope, FIREBASE_CONFIG) 
             "company": contact.company,
             "category": contact.category,
             "cell_phone": contact.cell_phone,
-            "email": contact.cell_phone,
+            "email": contact.email,
             "location": contact.location,
             "github_link": contact.github_link,
             "linkedin_link": contact.linkedin_link,
@@ -35,11 +34,10 @@ app.service("ContactsService", function($http, $q, $rootScope, FIREBASE_CONFIG) 
                     fbContacts[key].id = key; 
                     contacts.push(fbContacts[key]);
                 });
-                console.log("contacts", contacts);
                 resolve(contacts);
                 
             }).catch((err) => {
-                reject(err);
+                reject("error in getAllContacts in Contactsservices", err);
             });
         });
     };
@@ -61,22 +59,56 @@ app.service("ContactsService", function($http, $q, $rootScope, FIREBASE_CONFIG) 
                     resolve(contacts);
                 });
             }).catch((err) => {
-                reject(err);
+                reject("error in getFavorites in Contactsservices", err);
             });
         });
     };
 
     const updateContact = (contact, contactId) => {
-        console.log("inside updateContact", contactId);
         return $http.put(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`, JSON.stringify(contact));
     };
 
     const getSingleContact = (contactId) => {
-        console.log("inside getSingleContact");
         return $http.get(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`);
       };
 
+    const assignImage = (category) => {
+        let image;
+        switch(category) {
+            case "Friend":
+                image = "./images/friend.jpg";
+                break;
+            case "Family":
+                image = "./images/family.jpg";
+                break;
+            case "Acquaintance":
+                image = "./images/acquaintance.jpg";
+                break;
+            case "Classmate":
+                image = "./images/classmate.jpg";
+                break;
+            case "Client":
+                image = "./images/client.jpg";
+                break;
+            case "Colleague":
+                image = "./images/colleague.jpg";
+                break;
+            case "Manager/Supervisor":
+                image = "./images/manager.jpg";
+                break;
+            case "Mentor":
+                image = "./images/mentor.png";
+                break;
+            case "Teacher":
+                image = "./images/teacher.jpg";
+                break;
+            default:
+                image = "./images/other.jpg";
+        }
+        return image;
+    };
 
-    return {postNewContact, getAllContacts, deleteContact, createContactObject, getFavorites, updateContact, getSingleContact};
+
+    return {postNewContact, getAllContacts, deleteContact, createContactObject, getFavorites, updateContact, getSingleContact, assignImage};
 });
 
