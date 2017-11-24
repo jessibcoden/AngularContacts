@@ -25,6 +25,26 @@ app.service("ContactsService", function($http, $q, $rootScope, FIREBASE_CONFIG) 
         return $http.post(`${FIREBASE_CONFIG.databaseURL}/contacts.json`, JSON.stringify(newContact));
     };
 
+    const searchContacts = (userID, query) => {
+        console.log("query inside searchContacts", query);
+        let contacts = [];
+        return $q((resolve, reject) => {
+            $http.get(`${FIREBASE_CONFIG.databaseURL}/contacts.json?orderBy="uid"&equalTo="${userId}&query=${query}"`).then((results) => {
+                console.log("results inside searchContacts", results);
+                let fbContacts = results.data;
+                Object.keys(fbContacts).forEach((key) => {
+                    fbContacts[key].id = key; 
+                    contacts.push(fbContacts[key]);
+                });
+                resolve(contacts);
+                
+            }).catch((err) => {
+                reject("error in searchContacts in Contactsservices", err);
+            });
+                
+        });
+    };
+
     const getAllContacts = (userId) => {
         let contacts = [];
         return $q((resolve, reject) => {
@@ -109,6 +129,6 @@ app.service("ContactsService", function($http, $q, $rootScope, FIREBASE_CONFIG) 
     };
 
 
-    return {postNewContact, getAllContacts, deleteContact, createContactObject, getFavorites, updateContact, getSingleContact, assignImage};
+        return {postNewContact, getAllContacts, deleteContact, createContactObject, getFavorites, updateContact, getSingleContact, assignImage, searchContacts};
 });
 

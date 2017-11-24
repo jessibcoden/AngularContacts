@@ -1,5 +1,34 @@
 <div class="text-center" id="view">
-    <h1>My Contacts</h1>
+    <div class="header row">
+        <div class="col-md-4">
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-keypress="enterPush($event, userId)" placeholder="Search All Contacts" ng-model="query">
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <h1>My Contacts</h1>
+        </div>
+        <div class="btn-group navbar-form navbar-center col-md-4">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Filter Contacts by Category <span class="caret"></span>
+            </button>
+                <ul class="dropdown-menu">
+                    <li>Friend</li>
+                    <li>Family</li>
+                    <li>Acquaintance</li>
+                    <li>Colleague</li>
+                    <li>Classmate</li>
+                    <li>Teacher</li>
+                    <li>Mentor</li>
+                    <li>Manager/Supervisor</li>
+                    <li>Client</li>
+                    <li>Other</li>
+                </ul>
+        </div>
+    </div>
+
 
     <div id="contacts" class="col-md-offset-2">
         <div class="col-sm-6 col-md-3 contactCard" ng-repeat="contact in contacts" style="width: 20rem;">
