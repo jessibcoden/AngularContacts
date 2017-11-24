@@ -13,24 +13,24 @@ app.controller("DetailCtrl", function ($location, $routeParams, $scope, Contacts
 
     getContacts();
 
-    $scope.makeFavorite = (contact, contactId) => {
-        console.log("inside makeFavorite");
-        contact.favorite = true;
-        let updateFavoriteStatus = ContactsService.createContactObject(contact);
-        ContactsService.updateContact(updateFavoriteStatus, contact.id).then((result) => {
-            getContacts();
-        }).catch((err) => {
-            console.log("error in makeFavorite in DetailCtrl", err);
-        });
-    };
-
-    $scope.makeNotFavorite = (contact, contactId) => {
+    $scope.makeNotFavorite = (contact) => {
         contact.favorite = false;
         let updateFavoriteStatus = ContactsService.createContactObject(contact);
-        ContactsService.updateContact(updateFavoriteStatus, contact.id).then((result) => {
+        ContactsService.updateContact(updateFavoriteStatus, $routeParams.contactId).then((result) => {
             getContacts();
         }).catch((err) => {
             console.log("error in makeNotFavorite in DetailCtrl", err);
+        });
+    };
+
+    $scope.makeFavorite = (contact) => {
+        console.log("inside makeFavorite");
+        contact.favorite = true;
+        let updateFavoriteStatus = ContactsService.createContactObject(contact);
+        ContactsService.updateContact(updateFavoriteStatus, $routeParams.contactId).then((result) => {
+            getContacts();
+        }).catch((err) => {
+            console.log("error in makeFavorite in DetailCtrl", err);
         });
     };
 

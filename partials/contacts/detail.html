@@ -11,8 +11,8 @@
                 <p>{{contact.location}}</p>
                 <p>{{contact.cell_phone}}</p>
                 <p class="email text-left">{{contact.email}}</p>
-                <button class="btn btn-default star" ng-if="contact.favorite" ng-click="makeNotFavorite(contact, contactId)" ><i class="fa fa-star" aria-hidden="true"></i></button>
-                <button class="btn btn-default star" ng-if="!contact.favorite" ng-click="makeFavorite(contact, contactId)" ><i class="fa fa-star-o" aria-hidden="true"></i></button>
+                <button class="btn btn-default star" ng-if="contact.favorite" ng-click="makeNotFavorite(contact)" ><i class="fa fa-star" aria-hidden="true"></i></button>
+                <button class="btn btn-default star" ng-if="!contact.favorite" ng-click="makeFavorite(contact)" ><i class="fa fa-star-o" aria-hidden="true"></i></button>
                 <button class="btn btn-default edit" ng-click="editContact(contact.id)" ><i class="fa fa-pencil" aria-hidden="true"></i></button>
             </div>
         </div>

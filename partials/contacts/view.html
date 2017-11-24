@@ -11,8 +11,8 @@
                     </div>
                     <div class="buttonDiv">
                         <button class="btn btn-default align-text-bottom delete" ng-click="deleteContact(contact.id)"><i class="fa fa-trash"></i></button>
-                        <button class="btn btn-default align-text-bottom star" ng-if="contact.favorite" ng-click="makeNotFavorite(contact, contactId)" ><i class="fa fa-star" aria-hidden="true"></i></button>
-                        <button class="btn btn-default align-text-bottom star" ng-if="!contact.favorite" ng-click="makeFavorite(contact, contactId)" ><i class="fa fa-star-o" aria-hidden="true"></i></button>
+                        <button class="btn btn-default align-text-bottom star" ng-if="contact.favorite" ng-click="makeNotFavorite(contact)" ><i class="fa fa-star" aria-hidden="true"></i></button>
+                        <button class="btn btn-default align-text-bottom star" ng-if="!contact.favorite" ng-click="makeFavorite(contact)" ><i class="fa fa-star-o" aria-hidden="true"></i></button>
                         <button class="btn btn-default align-text-bottom edit" ng-click="editContact(contact.id)" ><i class="fa fa-pencil" aria-hidden="true"></i></button>
                         <button class="btn btn-default align-text-bottom detail" ng-click="showDetails(contact.id)" ><i class="fa fa-search" ></i></button>
                     </div>
