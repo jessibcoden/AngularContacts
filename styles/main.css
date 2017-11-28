@@ -10,13 +10,56 @@
   .googleButton:hover {
     box-shadow: 0 0 20px #FBBC05; }
 
-.contactCard {
-  background-color: lightslategray;
-  text-align: center;
+form {
+  margin-left: 7%; }
+
+.detailHeader {
+  margin-top: 10px; }
+
+.detailCard {
+  background-color: rgba(171, 172, 171, 0.6);
+  text-align: left;
   height: 350px;
-  margin: 10px; }
+  margin: 10px;
+  box-shadow: 7px 7px 5px #383636;
+  border-radius: 5px; }
+
+.detailImage {
+  height: 200px;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: 2px solid black;
+  box-shadow: 3px 3px 2px #2b2929; }
+
+.contactCard {
+  max-height: 100%;
+  text-align: center;
+  margin: 10px;
+  box-shadow: 7px 7px 5px #383636;
+  border-radius: 5px; }
+  .contactCard .btn {
+    vertical-align: bottom; }
+  .contactCard .contactImage {
+    width: 100%;
+    height: 40%;
+    border-radius: 60%;
+    border: 2px solid black;
+    box-shadow: 3px 3px 2px #2b2929;
+    opacity: 0.7; }
+  .contactCard .headerDiv {
+    height: 74px;
+    overflow: scroll; }
+  .contactCard .contactSubheader {
+    overflow: scroll; }
+  .contactCard .buttonDiv {
+    margin-top: 13px;
+    margin-bottom: 10px; }
   .contactCard .card {
-    margin: auto; }
+    margin: auto;
+    color: white; }
+    .contactCard .card .contactHeader {
+      color: black; }
     .contactCard .card .email {
       overflow: hidden;
       text-overflow: ellipsis; }

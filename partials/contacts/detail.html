@@ -1,0 +1,20 @@
+<div id="detail">
+    <div class"container detailCard">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-3">
+                <img class="detailImage" ng-src="{{contact.image}}">
+            </div>
+            <div class="col-md-4">
+                <h2 class="detailHeader text-md-left">{{contact.first_name}} {{contact.last_name}}</h2>
+                <h4 class="detailSubheader">{{contact.title}} at {{contact.company}}</h4>
+                <p>- {{contact.category}} -</p>
+                <p>{{contact.location}}</p>
+                <p>{{contact.cell_phone}}</p>
+                <p class="email text-left">{{contact.email}}</p>
+                <button class="btn btn-default star" ng-if="contact.favorite" ng-click="makeNotFavorite(contact)" ><i class="fa fa-star" aria-hidden="true"></i></button>
+                <button class="btn btn-default star" ng-if="!contact.favorite" ng-click="makeFavorite(contact)" ><i class="fa fa-star-o" aria-hidden="true"></i></button>
+                <button class="btn btn-default edit" ng-click="editContact(contact.id)" ><i class="fa fa-pencil" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+</div>

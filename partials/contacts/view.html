@@ -1,29 +1,24 @@
 <div class="text-center" id="view">
     <h1>My Contacts</h1>
+
     <div id="contacts" class="col-md-offset-2">
-        <div class="col-sm-6 col-md-3 contactCard" ng-repeat="contact in contacts">
-            
-            
-    <div class="card" style="width: 20rem;">
-            <div class="card-block">
-              <h3 class="contactHeader">{{contact.first_name}} {{contact.last_name}}</h3>
-              <p>- {{contact.category}} -</p>
-              <h4 class="contactSubheader">{{contact.title}} at {{contact.company}}</h4>
-            </div>
-            
-            <div class="card-block">
-                <p class="list-group-item">{{contact.cell_phone}}</p>
-                <p class="list-group-item email">{{contact.email}}</p>
-                <p class="list-group-item">{{contact.location}}</p>
-            </div>
-
-            <div class="card-block">
-                <button class="btn btn-default delete" ng-click="deleteContact(contact.id)"><i class="fa fa-trash"></i></button>
-            </div>
-        </div>    
-
-            
+        <div class="col-sm-6 col-md-3 contactCard" ng-repeat="contact in contacts" style="width: 20rem;">
+                <img class="card-img-top contactImage" ng-src="{{contact.image}}" alt="Card image cap">
+                <div class="card-body">
+                    <div class="headerDivs">
+                    <h4 class="contactHeader">{{contact.first_name}} {{contact.last_name}}</h4>
+                    <h5 class="contactSubheader">{{contact.title}} at {{contact.company}}</h5>
+                    </div>
+                    <div class="buttonDiv">
+                        <button class="btn btn-default align-text-bottom delete" ng-click="deleteContact(contact.id)"><i class="fa fa-trash"></i></button>
+                        <button class="btn btn-default align-text-bottom star" ng-if="contact.favorite" ng-click="makeNotFavorite(contact)" ><i class="fa fa-star" aria-hidden="true"></i></button>
+                        <button class="btn btn-default align-text-bottom star" ng-if="!contact.favorite" ng-click="makeFavorite(contact)" ><i class="fa fa-star-o" aria-hidden="true"></i></button>
+                        <button class="btn btn-default align-text-bottom edit" ng-click="editContact(contact.id)" ><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                        <button class="btn btn-default align-text-bottom detail" ng-click="showDetails(contact.id)" ><i class="fa fa-search" ></i></button>
+                    </div>
+                </div>
         </div>
     </div>
+
 </div>
 

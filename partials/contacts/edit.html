@@ -1,0 +1,92 @@
+<div class="text-center" id="edit">
+        <h1>Edit Contact</h1>
+    </div>
+    
+    <div class="col-md-offset-3"> 
+        <form name="editContactForm" novalidate>
+    
+            <fieldset class="container">
+                <legend class="col-md-2 control-label" >Name</legend> 
+                    <fieldset name="name" class="form-group text-center">
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
+                                <input  name="first_name" placeholder="First Name" class="form-control"  type="text" required ng-model="contact.first_name" >
+                            </p>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
+                                <input name="last_name" placeholder="Last Name" class="form-control"  type="text" required ng-model="contact.last_name" >
+                                
+                            </div>
+                        </div>
+                    </fieldset>
+            </fieldset>
+    
+    
+            <fieldset class="container">
+                <legend class="col-md-2 control-label" >Contact</legend> 
+                    <fieldset name="contact" class="form-group text-center">
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                                <input name="email" placeholder="E-Mail Address" class="form-control"  type="email" ng-model="contact.email" required>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
+                                <input name="cell_phone" placeholder="(845)555-1212" class="form-control" type="phone" ng-model="contact.cell_phone" required>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                <input name="location" placeholder="City, State" class="form-control" type="text" ng-model="contact.location" required>
+                            </div>
+                        </div>
+                    </fieldset>
+            </fieldset> 
+    
+            
+            <fieldset class="container">
+                <legend class="col-md-2 control-label" >About</legend> 
+                    <fieldset name="about" class="form-group text-center">
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-list-alt"></i></span>
+                                <select name="category" class="form-control selectpicker" ng-model="contact.category" required>
+                                <option>Family</option>
+                                <option>Friend</option>
+                                <option>Acquaintance</option>
+                                <option>Colleague</option>
+                                <option>Mentor</option>
+                                <option>Manager/Supervisor</option>
+                                <option>Classmate</option>
+                                <option>Teacher</option>
+                                <option>Client</option>
+                                <option>Other</option>
+                                </select>
+                            </div>
+    
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
+                                <input name="title" placeholder="Title" class="form-control"  type="text" ng-model="contact.title" required>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-building"></i></span>
+                                <input name="company" placeholder="Company" class="form-control"  type="text" ng-model="contact.company" required>
+                            </div>
+                        </div>
+                    </fieldset>
+            </fieldset> 
+            
+    
+            <div class="container">     
+                <div class="row">
+                    <div class="col-md-offset-3">
+                        <button type="submit" class="btn btn-warning" ng-click="saveEdits(contact)" ng-disabled="newContactForm.$invalid" value="Save">Save Contact</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    
+    </div>
+    
+    
