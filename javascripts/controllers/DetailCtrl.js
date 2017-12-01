@@ -24,7 +24,6 @@ app.controller("DetailCtrl", function ($location, $routeParams, $scope, Contacts
     };
 
     $scope.makeFavorite = (contact) => {
-        console.log("inside makeFavorite");
         contact.favorite = true;
         let updateFavoriteStatus = ContactsService.createContactObject(contact);
         ContactsService.updateContact(updateFavoriteStatus, $routeParams.contactId).then((result) => {
