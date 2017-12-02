@@ -109,6 +109,6 @@ app.service("ContactsService", function($http, $q, $rootScope, FIREBASE_CONFIG) 
     };
 
 
-    return {postNewContact, getAllContacts, deleteContact, createContactObject, getFavorites, updateContact, getSingleContact, assignImage};
+        return {postNewContact, getAllContacts, deleteContact, createContactObject, getFavorites, updateContact, getSingleContact, assignImage, searchContacts};
 });
 

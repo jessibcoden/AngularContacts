@@ -1,8 +1,23 @@
 <div class="text-center" id="view">
-    <h1>My Contacts</h1>
+    <div class="header row">
+        <div class="col-md-4">
+
+                <form class="navbar-form navbar-left col-offset-6 centered">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search All Contacts" ng-model="searchText">
+                    </div>
+                </form>
+
+        </div>
+        <div class="col-md-4">
+            <h1>My Contacts</h1>
+        </div>
+       
+    </div>
+
 
     <div id="contacts" class="col-md-offset-2">
-        <div class="col-sm-6 col-md-3 contactCard" ng-repeat="contact in contacts" style="width: 20rem;">
+        <div class="col-sm-6 col-md-3 contactCard" ng-repeat="contact in contacts | filter: searchText" style="width: 20rem;">
                 <img class="card-img-top contactImage" ng-src="{{contact.image}}" alt="Card image cap">
                 <div class="card-body">
                     <div class="headerDivs">
