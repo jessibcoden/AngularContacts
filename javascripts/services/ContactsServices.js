@@ -25,24 +25,6 @@ app.service("ContactsService", function($http, $q, $rootScope, FIREBASE_CONFIG) 
         return $http.post(`${FIREBASE_CONFIG.databaseURL}/contacts.json`, JSON.stringify(newContact));
     };
 
-    const searchContacts = (userID, query) => {
-        let contacts = [];
-        return $q((resolve, reject) => {
-            $http.get(`${FIREBASE_CONFIG.databaseURL}/contacts.json?orderBy="uid"&equalTo="${userID}&query=${query}"`).then((results) => {
-                let fbContacts = results.data;
-                Object.keys(fbContacts).forEach((key) => {
-                    fbContacts[key].id = key; 
-                    contacts.push(fbContacts[key]);
-                });
-                resolve(contacts);
-                
-            }).catch((err) => {
-                reject("error in searchContacts in Contactsservices", err);
-            });
-                
-        });
-    };
-
     const getAllContacts = (userId) => {
         let contacts = [];
         return $q((resolve, reject) => {
