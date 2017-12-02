@@ -26,11 +26,9 @@ app.service("ContactsService", function($http, $q, $rootScope, FIREBASE_CONFIG) 
     };
 
     const searchContacts = (userID, query) => {
-        console.log("query inside searchContacts", query);
         let contacts = [];
         return $q((resolve, reject) => {
             $http.get(`${FIREBASE_CONFIG.databaseURL}/contacts.json?orderBy="uid"&equalTo="${userID}&query=${query}"`).then((results) => {
-                console.log("results inside searchContacts", results);
                 let fbContacts = results.data;
                 Object.keys(fbContacts).forEach((key) => {
                     fbContacts[key].id = key; 
