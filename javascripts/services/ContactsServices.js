@@ -29,7 +29,7 @@ app.service("ContactsService", function($http, $q, $rootScope, FIREBASE_CONFIG) 
         console.log("query inside searchContacts", query);
         let contacts = [];
         return $q((resolve, reject) => {
-            $http.get(`${FIREBASE_CONFIG.databaseURL}/contacts.json?orderBy="uid"&equalTo="${userId}&query=${query}"`).then((results) => {
+            $http.get(`${FIREBASE_CONFIG.databaseURL}/contacts.json?orderBy="uid"&equalTo="${userID}&query=${query}"`).then((results) => {
                 console.log("results inside searchContacts", results);
                 let fbContacts = results.data;
                 Object.keys(fbContacts).forEach((key) => {

@@ -16,20 +16,6 @@ app.controller("ViewCtrl", function($location, $scope,$rootScope, $routeParams, 
   
     getContacts(); 
 
-    $scope.enterPush = (event, userId) => {
-        userId = $rootScope.uid;
-        console.log("userId", userId);
-        if(event.keyCode === 13){
-            let query = event.target.value;
-            console.log("query on enter",query);
-            ContactsService.searchContacts(userId, query).then((results) => {
-                $scope.contacts=results.data.results;
-            }).catch((err) => {
-                    console.log("error in enterPush", err);
-                });
-        }
-    };
-
     $scope.deleteContact = (contactId) => {
         ContactsService.deleteContact(contactId).then((result) => {
             getContacts();
